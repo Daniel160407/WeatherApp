@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1080.0" prefWidth="1930.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weatherapp.HomeController">
+    <children>
+        <HBox fx:id="mainHBox" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1080.0" prefWidth="1920.0">
+            <children>
+                <Pane fx:id="leftSidePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="748.0" prefWidth="128.0">
+                    <children>
+                        <RadioButton fx:id="darkMode" layoutX="14.0" layoutY="960.0" mnemonicParsing="false" onAction="#onDarkModeButtonAction" text="Dark Mode">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </RadioButton>
+                    </children>
+                </Pane>
+                <Pane fx:id="centerPane" prefHeight="1080.0" prefWidth="1533.0">
+                    <children>
+                        <ImageView fx:id="weatherIcon" fitHeight="83.0" fitWidth="94.0" layoutX="161.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="https://forums.synfig.org/uploads/default/original/2X/3/31d749625faa93271be23874d416f9be755b7cb9.gif" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="weatherText" layoutX="302.0" layoutY="178.0" prefHeight="38.0" prefWidth="166.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="rightSidePane" prefHeight="748.0" prefWidth="194.0" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

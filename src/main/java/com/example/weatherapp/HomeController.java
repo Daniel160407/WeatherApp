@@ -1,13 +1,12 @@
 package com.example.weatherapp;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
-public class FrontController {
+public class HomeController {
     @FXML
     private RadioButton darkMode;
     @FXML
@@ -31,10 +30,11 @@ public class FrontController {
     private void darkModeColorsChanger(String color){
         if (color.equals(whiteColor)) {
             mainAnchorPane.setStyle("-fx-background-color: " + blackColor);
-            darkMode.setStyle("-fx-text-fill: " + whiteColor);
+            darkMode.setStyle("-fx-text-fill: " + "white");
         } else {
             mainAnchorPane.setStyle("-fx-background-color: " + whiteColor);
             darkMode.setStyle("-fx-text-fill: " + blackColor);
         }
     }
+
 }
