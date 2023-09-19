@@ -60,10 +60,10 @@ public class HomeController {
         weatherInfo.getWeatherInfo(search.getText());
         weatherIconChanger();
         weatherText.setText("Weather: " + weatherInfo.weather);
-        temperature.setText("Temperature: " + Integer.toString((int) weatherInfo.temperature) + "°C");
-        temperatureFeelsLike.setText("Feels like: " + Integer.toString((int) weatherInfo.temperatureFeelsLike) + "°C");
-        pressure.setText("Pressure: " + Integer.toString((int) weatherInfo.pressure));
-        humidity.setText("Humidity: " + Integer.toString((int) weatherInfo.humidity) + '%');
+        temperature.setText("Temperature: " + (int) weatherInfo.temperature + "°C");
+        temperatureFeelsLike.setText("Feels like: " + (int) weatherInfo.temperatureFeelsLike + "°C");
+        pressure.setText("Pressure: " + (int) weatherInfo.pressure);
+        humidity.setText("Humidity: " + (int) weatherInfo.humidity + '%');
         visibility.setText("Visibility: " + weatherInfo.visibility + "m");
         windSpeed.setText("Wind speed: " + weatherInfo.windSpeed + "km/h");
         country_city.setText(weatherInfo.country + ": " + weatherInfo.city);
@@ -74,10 +74,24 @@ public class HomeController {
             mainAnchorPane.setStyle("-fx-background-color: " + blackColor);
             darkMode.setStyle("-fx-text-fill: " + "white");
             weatherText.setStyle("-fx-text-fill: " + "white");
+            temperature.setStyle("-fx-text-fill: " + "white");
+            temperatureFeelsLike.setStyle("-fx-text-fill: " + "white");
+            pressure.setStyle("-fx-text-fill: " + "white");
+            humidity.setStyle("-fx-text-fill: " + "white");
+            visibility.setStyle("-fx-text-fill: " + "white");
+            windSpeed.setStyle("-fx-text-fill: " + "white");
+            country_city.setStyle("-fx-text-fill: " + "white");
         } else {
             mainAnchorPane.setStyle("-fx-background-color: " + whiteColor);
             darkMode.setStyle("-fx-text-fill: " + blackColor);
             weatherText.setStyle("-fx-text-fill: " + blackColor);
+            temperature.setStyle("-fx-text-fill: " + blackColor);
+            temperatureFeelsLike.setStyle("-fx-text-fill: " + blackColor);
+            pressure.setStyle("-fx-text-fill: " + blackColor);
+            humidity.setStyle("-fx-text-fill: " + blackColor);
+            visibility.setStyle("-fx-text-fill: " + blackColor);
+            windSpeed.setStyle("-fx-text-fill: " + blackColor);
+            country_city.setStyle("-fx-text-fill: " + blackColor);
         }
     }
 

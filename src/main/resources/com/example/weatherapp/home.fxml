@@ -5,51 +5,41 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="mainAnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1080.0" prefWidth="1930.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weatherapp.HomeController">
-    <children>
-        <HBox fx:id="mainHBox" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1080.0" prefWidth="1920.0">
-            <children>
-                <Pane fx:id="leftSidePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="748.0" prefWidth="128.0">
-                    <children>
-                        <RadioButton fx:id="darkMode" layoutX="14.0" layoutY="960.0" mnemonicParsing="false" onAction="#onDarkModeButtonAction" text="Dark Mode">
-                            <font>
-                                <Font size="14.0" />
-                            </font>
-                        </RadioButton>
-                    </children>
-                </Pane>
-                <Pane fx:id="centerPane" prefHeight="1080.0" prefWidth="1533.0">
-                    <children>
-                        <ImageView fx:id="weatherIcon" fitHeight="83.0" fitWidth="94.0" layoutX="161.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true" />
-                        <Label fx:id="weatherText" layoutX="273.0" layoutY="178.0" prefHeight="38.0" prefWidth="382.0">
-                            <font>
-                                <Font size="20.0" />
-                            </font>
-                        </Label>
-                  <TextField fx:id="search" layoutX="27.0" layoutY="14.0" onAction="#onSearchAction" promptText="Search your city" />
-                  <Label fx:id="temperatureFeelsLike" layoutX="471.0" layoutY="220.0" prefHeight="38.0" prefWidth="194.0">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="temperature" layoutX="277.0" layoutY="220.0" prefHeight="38.0" prefWidth="166.0">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="humidity" layoutX="277.0" layoutY="261.0" prefHeight="38.0" prefWidth="119.0" />
-                  <Label fx:id="visibility" layoutX="417.0" layoutY="261.0" prefHeight="38.0" prefWidth="139.0" />
-                  <Label fx:id="windSpeed" layoutX="277.0" layoutY="299.0" prefHeight="38.0" prefWidth="139.0" />
-                  <Label fx:id="pressure" layoutX="417.0" layoutY="299.0" prefHeight="38.0" prefWidth="128.0" />
-                  <Label fx:id="country_city" layoutX="645.0" layoutY="220.0" prefHeight="38.0" prefWidth="194.0" />
-                    </children>
-                </Pane>
-                <Pane fx:id="rightSidePane" prefHeight="748.0" prefWidth="194.0" />
-            </children>
-        </HBox>
-    </children>
+   <children>
+      <Pane fx:id="centerPane" layoutX="10.0" layoutY="10.0" prefHeight="1080.0" prefWidth="1533.0">
+         <children>
+            <ImageView fx:id="weatherIcon" fitHeight="83.0" fitWidth="94.0" layoutX="161.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="weatherText" layoutX="273.0" layoutY="178.0" prefHeight="38.0" prefWidth="382.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="search" layoutX="27.0" layoutY="14.0" onAction="#onSearchAction" promptText="Search your city" />
+            <Label fx:id="temperatureFeelsLike" layoutX="471.0" layoutY="220.0" prefHeight="38.0" prefWidth="194.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="temperature" layoutX="273.0" layoutY="220.0" prefHeight="38.0" prefWidth="166.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidity" layoutX="277.0" layoutY="261.0" prefHeight="38.0" prefWidth="119.0" />
+            <Label fx:id="visibility" layoutX="417.0" layoutY="261.0" prefHeight="38.0" prefWidth="139.0" />
+            <Label fx:id="windSpeed" layoutX="277.0" layoutY="299.0" prefHeight="38.0" prefWidth="139.0" />
+            <Label fx:id="pressure" layoutX="417.0" layoutY="299.0" prefHeight="38.0" prefWidth="128.0" />
+            <Label fx:id="country_city" layoutX="645.0" layoutY="220.0" prefHeight="38.0" prefWidth="194.0" />
+            <RadioButton fx:id="darkMode" layoutX="190.0" layoutY="17.0" mnemonicParsing="false" onAction="#onDarkModeButtonAction" text="Dark Mode">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
