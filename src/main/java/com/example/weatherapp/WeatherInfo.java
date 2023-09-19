@@ -19,10 +19,10 @@ public class WeatherInfo {
     public String country;
     public String city;
 
-    public void getWeatherInfo() {
+    public void getWeatherInfo(String cityToBeSearched) {
         try {
             String apiKey = "b4269571b9c697fc49518b01f5a3d35c";
-            String cityName = "Tbilisi";
+            String cityName = cityToBeSearched;
             String encodedCityName = URLEncoder.encode(cityName, "UTF-8");
             String apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + encodedCityName + "&appid=" + apiKey;
             URL url = new URL(apiUrl);

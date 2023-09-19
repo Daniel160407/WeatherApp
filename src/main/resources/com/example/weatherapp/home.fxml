@@ -2,7 +2,7 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -24,16 +24,28 @@
                 </Pane>
                 <Pane fx:id="centerPane" prefHeight="1080.0" prefWidth="1533.0">
                     <children>
-                        <ImageView fx:id="weatherIcon" fitHeight="83.0" fitWidth="94.0" layoutX="161.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="https://forums.synfig.org/uploads/default/original/2X/3/31d749625faa93271be23874d416f9be755b7cb9.gif" />
-                            </image>
-                        </ImageView>
-                        <Label fx:id="weatherText" layoutX="302.0" layoutY="178.0" prefHeight="38.0" prefWidth="166.0">
+                        <ImageView fx:id="weatherIcon" fitHeight="83.0" fitWidth="94.0" layoutX="161.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="weatherText" layoutX="273.0" layoutY="178.0" prefHeight="38.0" prefWidth="382.0">
                             <font>
-                                <Font size="16.0" />
+                                <Font size="20.0" />
                             </font>
                         </Label>
+                  <TextField fx:id="search" layoutX="27.0" layoutY="14.0" onAction="#onSearchAction" promptText="Search your city" />
+                  <Label fx:id="temperatureFeelsLike" layoutX="471.0" layoutY="220.0" prefHeight="38.0" prefWidth="194.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="temperature" layoutX="277.0" layoutY="220.0" prefHeight="38.0" prefWidth="166.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="humidity" layoutX="277.0" layoutY="261.0" prefHeight="38.0" prefWidth="119.0" />
+                  <Label fx:id="visibility" layoutX="417.0" layoutY="261.0" prefHeight="38.0" prefWidth="139.0" />
+                  <Label fx:id="windSpeed" layoutX="277.0" layoutY="299.0" prefHeight="38.0" prefWidth="139.0" />
+                  <Label fx:id="pressure" layoutX="417.0" layoutY="299.0" prefHeight="38.0" prefWidth="128.0" />
+                  <Label fx:id="country_city" layoutX="645.0" layoutY="220.0" prefHeight="38.0" prefWidth="194.0" />
                     </children>
                 </Pane>
                 <Pane fx:id="rightSidePane" prefHeight="748.0" prefWidth="194.0" />
